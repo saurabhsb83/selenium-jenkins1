@@ -22,7 +22,7 @@ public class Selenium1Application {
 		
 		driver.get("https://www.apache.org/");
 		
-		System.out.println("title: " +driver.getTitle() + "  "  +driver.toString());
+		String title1 = "title: " +driver.getTitle() + "  "  +driver.toString();
 		
 		System.out.println("Navigated to Apache !!");
 		
@@ -37,7 +37,7 @@ public class Selenium1Application {
 		
 		driver.findElement(By.xpath("//a[contains(text(),'About')]")).click();
 		
-		System.out.println("title: " +driver.getTitle());
+		String title2 = "title: " +driver.getTitle() + "  "  +driver.toString();
 		
 		try {
 			Thread.sleep(3000);
@@ -47,7 +47,8 @@ public class Selenium1Application {
 		}
 		
 		driver.findElement(By.xpath("//a[contains(text(),'Process')]")).click();
-		System.out.println("title: " +driver.getTitle());
+		
+		String title3 = "title: " +driver.getTitle() + "  "  +driver.toString();
 		
 		try {
 			Thread.sleep(3000);
@@ -57,6 +58,7 @@ public class Selenium1Application {
 		}
 		
 		
+		System.out.println("printing: " +title1 + "  "  +title2 + " " +title3);
 		System.out.println("Closing browser and destroying driver object !");
 		driver.close();
 	}
