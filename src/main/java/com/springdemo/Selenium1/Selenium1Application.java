@@ -57,10 +57,10 @@ public class Selenium1Application {
 			e.printStackTrace();
 		}
 		
-		
+		driver.close();
 		System.out.println("printing: " +title1 + "  "  +title2 + " " +title3);
 		System.out.println("Closing browser and destroying driver object !");
-		driver.close();
+		
 	}
 
 }
