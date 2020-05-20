@@ -24,6 +24,8 @@ public class Selenium1Application {
 		
 		System.out.println("Navigated to Apache !!");
 		
+		System.out.println("title: " +driver.getTitle());
+		
 		try {
 			Thread.sleep(4000);
 		} catch (InterruptedException e) {
@@ -33,6 +35,8 @@ public class Selenium1Application {
 		
 		driver.findElement(By.xpath("//a[contains(text(),'About')]")).click();
 		
+		System.out.println(driver.getTitle());
+		
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -41,6 +45,7 @@ public class Selenium1Application {
 		}
 		
 		driver.findElement(By.xpath("//a[contains(text(),'Process')]")).click();
+		System.out.println("title: " +driver.getTitle());
 		
 		try {
 			Thread.sleep(3000);
