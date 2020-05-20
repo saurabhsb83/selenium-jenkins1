@@ -18,13 +18,15 @@ public class Selenium1Application {
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		driver.get("https://www.apache.org/");
 		
+		System.out.println("title: " +driver.getTitle() + "  "  +driver.toString());
+		
 		System.out.println("Navigated to Apache !!");
 		
-		System.out.println("title: " +driver.getTitle());
+		
 		
 		try {
 			Thread.sleep(4000);
@@ -35,7 +37,7 @@ public class Selenium1Application {
 		
 		driver.findElement(By.xpath("//a[contains(text(),'About')]")).click();
 		
-		System.out.println(driver.getTitle());
+		System.out.println("title: " +driver.getTitle());
 		
 		try {
 			Thread.sleep(3000);
